@@ -1,0 +1,48 @@
+[pretty]
+	my1line = %h <%cN> %cd %<(64,trunc)%s
+	deco1line = %C(auto) %h %d %<(64,trunc)%s
+[format]
+	pretty = my1line
+[user]
+	name = Yu Zhu
+	#email = yu.zhu@zhusmelb.com
+[core]
+	autocrlf = false
+#[difftool "sourcetree"]
+#	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+#[mergetool "sourcetree"]
+#	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
+#	trustExitCode = true
+#[diff]
+#	tool = bc
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cm = commit
+	ft = fetch
+	br = branch
+	dt = "difftool --gui --"
+	dtc = "difftool --gui --cached --"
+	fat = !git-fat.cmd
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+#[difftool "bc"]
+#	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+#[merge]
+#	tool = bc
+#[mergetool "bc"]
+#	path = C:/Program Files/Beyond Compare 4/BComp.exe
+[difftool]
+	prompt = false
+[init]
+	defaultBranch = main
+[credential "https://git-codecommit.us-east-1.amazonaws.com"]
+	provider = generic
+[credential]
+	helper = manager-core
+[credential "http://buswebtfs:8080"]
+	provider = generic
